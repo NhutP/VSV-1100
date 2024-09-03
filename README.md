@@ -1,3 +1,4 @@
+
 # VSV-1100: Vietnamese social voice dataset
 ## Introdution
 
@@ -9,13 +10,21 @@ This dataset includes over 1,100 hours of speech data. The voice samples were co
 - Size: 131 GB
 
 
+### Example
+```
+{'audio': {'path': None,
+           'array': array([....]),
+           'sampling_rate': 16000},
+ 'transcription': 'bạn có thể tìm ra cách khắc phục giai đoạn hai và ba tốt hơn'} 
+```
+
 ### Usage
 
 ```python
 from datasets import load_dataset
 ds = load_dataset("NhutP/VSV-1100", split= 'train')
-audio_array = ds['audio']['array']
-transcription = ds['transcription']
+audio_array = ds[0]['audio']['array']
+transcription = ds[0]['transcription']
 ```
 
 
