@@ -13,7 +13,7 @@ This dataset includes over 1,100 hours of speech data. The voice samples were co
 
 ```python
 from datasets import load_dataset
-ds = load_dataset("NhutP/VSV-1100_v1", split= 'train')
+ds = load_dataset("NhutP/VSV-1100", split= 'train')
 audio_array = ds['audio']['array']
 transcription = ds['transcription']
 ```
