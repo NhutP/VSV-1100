@@ -22,7 +22,15 @@ This dataset includes over 1,100 hours of speech data. The voice samples were co
 
 ```python
 from datasets import load_dataset
+# download the dataset
 ds = load_dataset("NhutP/VSV-1100", split= 'train')
+
+# download in streaming mode
+ds = load_dataset("NhutP/VSV-1100", split= 'train', streaming=True)
+
+# download a subset of the dataset
+ds = load_dataset("NhutP/VSV-1100", data_files='https://huggingface.co/datasets/NhutP/VSV-1100/resolve/main/data/train-00000-of-00027.parquet') # go to Files and versions
+
 audio_array = ds[0]['audio']['array']
 transcription = ds[0]['transcription']
 ```
